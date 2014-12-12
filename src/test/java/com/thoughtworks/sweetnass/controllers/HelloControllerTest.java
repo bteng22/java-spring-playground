@@ -1,6 +1,7 @@
-package com.thoughtworks.sweetnass;
+package com.thoughtworks.sweetnass.controllers;
 
-import com.thoughtworks.sweetnass.repository.PeopleRepository;
+import com.thoughtworks.sweetnass.config.AppConfig;
+import com.thoughtworks.sweetnass.config.ApplicationContext;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,15 +19,12 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
-public class AppTests {
+@ContextConfiguration(classes = {AppConfig.class, ApplicationContext.class})
+public class HelloControllerTest {
     private MockMvc mockMvc;
 
     @Autowired
     private WebApplicationContext wac;
-
-    @Autowired
-    private PeopleRepository peopleRepository;
 
     @Before
     public void setup() {

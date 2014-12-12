@@ -1,4 +1,4 @@
-package com.thoughtworks.sweetnass;
+package com.thoughtworks.sweetnass.config;
 
 import com.thoughtworks.sweetnass.repository.PeopleRepository;
 import org.springframework.context.annotation.Bean;

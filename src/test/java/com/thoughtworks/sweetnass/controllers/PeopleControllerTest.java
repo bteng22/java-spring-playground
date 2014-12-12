@@ -1,5 +1,7 @@
 package com.thoughtworks.sweetnass.controllers;
 
+import com.thoughtworks.sweetnass.config.AppConfig;
+import com.thoughtworks.sweetnass.config.ApplicationContext;
 import com.thoughtworks.sweetnass.domain.Address;
 import com.thoughtworks.sweetnass.domain.Person;
 import com.thoughtworks.sweetnass.repository.PeopleRepository;
@@ -20,7 +22,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
+@ContextConfiguration(classes = {AppConfig.class, ApplicationContext.class})
 public class PeopleControllerTest {
     private MockMvc mockMvc;
 
