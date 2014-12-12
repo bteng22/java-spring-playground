@@ -5,3 +5,9 @@ run
 mvn install
 
 if all tests pass all is good...
+
+
+also if you want to build using Gradle:
+--- ./gradlew build
+
+	^ this is better:)
