@@ -1,0 +1,7 @@
+need to install maven
+--- brew install maven
+
+run
+mvn install
+
+if all tests pass all is good...
